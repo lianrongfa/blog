@@ -34,4 +34,7 @@
       <bean id="test" abstract="true" scope="request" class="cn.lianrf.controller.HelloWorldController">
 
       </bean>
+      <bean id="applicationEventMulticaster" class="org.springframework.context.event.SimpleApplicationEventMulticaster">
+           <property name="taskExecutor" ref="taskExecutor"></property>
+      </bean>
 </beans>
